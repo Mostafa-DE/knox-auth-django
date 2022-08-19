@@ -40,11 +40,14 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'knox',
+    'demo'
 ]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('baseAuth.auth.CustomAuth',),
 }
+
+AUTH_USER_MODEL = 'demo.User'
 
 REST_KNOX = {'TOKEN_TTL': timedelta(hours=168)}
 
