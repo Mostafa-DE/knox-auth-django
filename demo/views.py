@@ -22,7 +22,13 @@ class LoginView(KnoxLoginView):
         user = serializer.validated_data['user']
         login(request, user)
         knox_response = super(LoginView, self).post(request, format=None)
-        knox_response.set_cookie(key='Token', value=knox_response.data.get('token'), httponly=True, samesite='none', secure=True)
+        knox_response.set_cookie(
+            key='Token',
+            value=knox_response.data.get('token'),
+            httponly=True,
+            samesite='none',
+            secure=True
+        )
         return knox_response
 
 
@@ -57,6 +63,6 @@ class LogoutView(KnoxLogoutView):
     def post(self, request, format=None):
         logout(request)
         response = Response()
-        response.delete_cookie(key='Token')
-        response.delete_cookie(key='csrftoken')
+        response.delete_cookie(key='Token', samesite='none', secure=True)
+        response.delete_cookie(key='csrftoken', samesite='none', secure=True)
         return response
