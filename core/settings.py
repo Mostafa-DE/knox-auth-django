@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_gnm^o=efj0*sorf61r=)cn4s-v2d)stua5o-4powy*q!#v^l('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'demoauth-gamma.vercel.app', 'djangodemoauth.herokuapp.com']
 CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000", "https://demoauth-gamma.vercel.app"]
