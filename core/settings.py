@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_gnm^o=efj0*sorf61r=)cn4s-v2d)stua5o-4powy*q!#v^l('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'demoauth-gamma.vercel.app', 'djangodemoauth.herokuapp.com']
 CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000", "https://demoauth-gamma.vercel.app"]
@@ -141,8 +141,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-import dj_database_url
-
-prod_db = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
