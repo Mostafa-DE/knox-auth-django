@@ -22,7 +22,7 @@ class LoginView(KnoxLoginView):
         user = serializer.validated_data['user']
         login(request, user)
         knox_response = super(LoginView, self).post(request, format=None)
-        knox_response.set_cookie(key='Token', value=knox_response.data.get('token'), httponly=True, samesite=None, domain='demoauth-gamma.vercel.app')
+        knox_response.set_cookie(key='Token', value=knox_response.data.get('token'), httponly=True, samesite='Lax')
         return knox_response
 
 
