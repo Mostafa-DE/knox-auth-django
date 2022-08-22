@@ -63,6 +63,6 @@ class LogoutView(KnoxLogoutView):
     def post(self, request, format=None):
         logout(request)
         response = Response()
-        response.delete_cookie(key='Token', samesite='none', secure=True)
-        response.delete_cookie(key='csrftoken', samesite='none', secure=True)
+        response.delete_cookie(key='Token', samesite='none')
+        response.delete_cookie(key='csrftoken', samesite='none')
         return response
