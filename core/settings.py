@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'demoauth-gamma.vercel.app',
-    'djangodemoauth.herokuapp.com'
+    'knox-auth-django-production.up.railway.app'
 ]
 
 CORS_ALLOWED_ORIGINS = [
