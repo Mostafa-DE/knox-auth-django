@@ -27,8 +27,19 @@ SECRET_KEY = 'django-insecure-_gnm^o=efj0*sorf61r=)cn4s-v2d)stua5o-4powy*q!#v^l(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'demoauth-gamma.vercel.app', 'djangodemoauth.herokuapp.com']
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000", "https://demoauth-gamma.vercel.app"]
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'demoauth-gamma.vercel.app',
+    'djangodemoauth.herokuapp.com'
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://demoauth-gamma.vercel.app"
+]
+
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
